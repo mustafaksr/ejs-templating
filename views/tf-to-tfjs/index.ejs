@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title id="title">Income Classification | TensorFlow.js</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/tf.css" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  </head>
+  <body>
+    <%- include('../partials/navbar') %> 
+    <h1>Income Classification</h1>
+    <h2>tensorflow to tf.js</h2>
+    
+    <div class="opts">
+      <label for="relationship">relationship:</label>
+      <select name="relationship" id="relationship">
+        <option value="husband">Husband</option>
+        <option value="not-in-family">Not-in-family</option>
+        <option value="other-relative">Other-relative</option>
+        <option value="own-child">Own-child</option>
+        <option value="unmarried">Unmarried</option>
+        <option value="wife">Wife</option>
+      </select>
+    </div>
+
+    <div class="opts">
+      <label for="education">education:</label>
+      <select name="education" id="education">
+        <option value="10th">10th</option>
+        <option value="11th">11th</option>
+        <option value="12th">12th</option>
+        <option value="1st-4th">1st-4th</option>
+        <option value="5th-6th">5th-6th</option>
+        <option value="7th-8th">7th-8th</option>
+        <option value="9th">9th</option>
+        <option value="assoc-acdm">Assoc-acdm</option>
+        <option value="assoc-voc">Assoc-voc</option>
+        <option value="bachelors">Bachelors</option>
+        <option value="doctorate">Doctorate</option>
+        <option value="hs-grad">HS-grad</option>
+        <option value="masters">Masters</option>
+        <option value="preschool">Preschool</option>
+        <option value="prof-school">Prof-school</option>
+        <option value="some-college">Some-college</option>
+      </select>
+    </div>
+
+<div id="all_slider">
+    <label for="fws" id="fw" class="labels">functional_weight: 19914</label>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="19914"
+        max="795830"
+        value="19914"
+        class="slider"
+        id="fws"
+      />
+    </div>
+
+    
+   <label for="cgs" id="cg" class="labels">capital_gain: 0</label>
+
+    <div class="slidecontainer">
+      
+      <input
+        type="range"
+        min="0"
+        max="99999"
+        value="0"
+        class="slider"
+        id="cgs"
+      />
+    </div>
+
+   <label for="cls" id="cl" class="labels">capital_loss: 0</label>
+
+    <div class="slidecontainer">
+      
+      <input
+        type="range"
+        min="0"
+        max="4356"
+        value="0"
+        class="slider"
+        id="cls"
+      />
+    </div>
+
+
+   <label for="hpws" id="hpw" class="labels">hours_per_week: 0</label>
+
+    <div class="slidecontainer">
+      
+      <input type="range" min="0" max="80" value="0" class="slider" id="hpws" />
+    </div>
+    </div>
+    
+    <div id="resultrun">
+    <button type="button" id="run">Run</button>
+      
+    <p id="outputtest"></p>
+
+    <h1 id="result_text">gt >= 50k</h1>
+    <h1 id="result_text2">?</h1>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
+      type="text/javascript"
+    ></script>
+
+    <script type="module" src="js/tf.js"></script>
+   
+    
+    <%- include('../partials/footer') %> 
+  </body>
+</html>
+

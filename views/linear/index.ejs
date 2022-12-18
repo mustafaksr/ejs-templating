@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hello World - TensorFlow.js</title>
+    <link href="/css/linstyle.css" rel="stylesheet"/>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+  </head>
+  
+  <body>
+    <%- include('../partials/navbar') %> 
+    <h2 id="h12">
+      TensorFlow.js Multiple Neuron Non Linear Regression to learn y = 2*x+4
+    </h2>
+
+    <div>
+      wanna enter inputs?: <input type="checkbox" id="check" />
+      <p>separate inputs with "," comma like: 1,2,3... etc</p>
+    </div>
+
+    <div class="slidecontainer">
+      X: <input type="text" id="input" />
+      <p id="intext"></p>
+    </div>
+    <p id="outputtest"></p>
+
+    <div class="slidecontainer">
+      y: <input type="text" id="output" />
+      <p id="outtext"></p>
+    </div>
+    <p id="test">epoch: 50</p>
+
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="10"
+        max="500"
+        value="50"
+        class="slider"
+        id="epoch"
+      />
+    </div>
+    <p id="batch-size">batch size: 32</p>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="2"
+        max="128"
+        value="32"
+        class="slider"
+        id="slider2"
+      />
+    </div>
+    <div id="div2">
+      <p id="text-output">click run for outputs.</p>
+      <button type="button" id="run">Run</button>
+      <p>MAKE PREDICTION</p>
+      <p>before training(run) enter X_test values for prediction</p>
+
+      <p id="info"></p>
+    </div>
+    <div id="myCanvas" width="500" height="400"></div>
+    <p id="in1"></p>
+    <p id="out1"></p>
+
+    <div class="slidecontainer">
+      X test:
+      <input type="text" id="predict" value="enter value for prediction" />
+    </div>
+    <p id="inTest"></p>
+    <div>
+      <p id="predictText">predictions: ...</p>
+    </div>
+    <div>
+      <p id="expectedText">expected results: ...</p>
+    </div>
+
+    <!-- Import TensorFlow.js library -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis"></script>
+    <!-- Import the page's JavaScript to do some stuff -->
+    <script type="module" src="js/linscript.js"></script>
+
+    <%- include('../partials/footer') %> 
+  </body>
+</html>
