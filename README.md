@@ -15,6 +15,7 @@ npm init -y
 
 3. :
 ```
+sudo npm install -g nodemon
 npm i express ejs
 ```
 
