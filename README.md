@@ -15,7 +15,7 @@ npm init -y
 
 3. :
 ```
-npm i express
+npm i express ejs
 ```
 
 4. :
