@@ -28,7 +28,7 @@ nodemon index.js
 
 Docker image:
 ```
-docker pull mustafakeser/tensorflowjs_simple_apps:latest
+docker pull mustafakeser/ejstemplating:latest
 export PORT=3000
-docker run -p $PORT:$PORT -e PORT=$PORT mustafakeser/tensorflowjs_simple_apps:latest
+docker run -p 80:$PORT -e PORT=$PORT mustafakeser/ejstemplating:latest
 ```
